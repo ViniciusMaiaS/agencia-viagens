@@ -3,10 +3,79 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Root (predefinição de Titulo, cores e etc) */
+:root {
+    --title-font: fantasy,  sans-serif;
+    --title-weight: 500;
+    --cor_branco: white;
+    --cor_preto: black;
+    --cor_madeira: #DEB887;
+    --cor_sol: #FF7B00;
+}
+
+
+/* Logo no titulo, navbar e botoes da navbar */
+.titulo {
+    font-family: var(--title-font);
+    font-weight: var(--title-weight);
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    padding: 16px 0px 8px 0px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 6px solid var(--cor_branco);
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.14),
+            rgba(0, 0, 0, 0.14)
+        ),
+         url(../images/backgroundnav.jpg);
+    background-size: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+nav {
+    padding: 10px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+nav a{
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-family: var(--title-font);
+    font-weight: var(--title-weight);
+    font-size: 22px;
+    padding: 5px;
+    text-decoration: none;
+    color:var(--cor_branco);
+    transition: transform 0.2s ease-in-out;
+}
+nav a:hover {
+    color: var(--cor_sol);
+    border-radius: 10px;
+    transform: scale(1.10);
+}
+/* FIM DA NAV*/
+
 
 body {
+    padding-top: 200px;
     font-family: Arial, sans-serif;
     background-color: #00BFFF;
     color: #ffffff;
-    padding: 20px;
 }
