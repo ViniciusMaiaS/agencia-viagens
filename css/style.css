@@ -18,16 +18,17 @@
 .titulo {
     font-family: var(--title-font);
     font-weight: var(--title-weight);
-    font-size: 4rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     line-height: 1.1;
-    padding: 16px 0px 8px 0px;
+    text-align: center;
+    margin-top: 25px;
 }
 .container {
-    max-width: 800px;
+    max-width: 390px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px;
 }
 header {
     position: fixed;
@@ -38,7 +39,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     border-bottom: 6px solid var(--cor_branco);
     background:
         linear-gradient(
@@ -52,15 +53,17 @@ header {
 nav {
     padding: 10px;
     display: flex;
-    gap: 80px;
+    flex-direction: column;
+    gap: 8px;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 10px
 }
 nav a{
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
     font-family: var(--title-font);
     font-weight: var(--title-weight);
-    font-size: 22px;
-    padding: 5px;
+    font-size: 30px;
     text-decoration: none;
     color:var(--cor_branco);
     transition: transform 0.2s ease-in-out;
@@ -68,6 +71,10 @@ nav a{
 nav a:hover {
     color: var(--cor_sol);
     border-radius: 10px;
+    transform: scale(1.10);
+}
+nav a.pagina_ativa {
+    color: var(--cor_sol);
     transform: scale(1.10);
 }
 /* FIM DA NAV*/
@@ -120,3 +127,49 @@ body {
 .sobre p:last-child {
     margin-bottom: 0;
 }
+
+
+
+
+
+
+
+
+
+/* tela para tablet */
+@media (min-width: 768px) {
+
+}
+/* Fim tela para tablet*/
+ 
+
+
+
+
+
+
+/* Tela para PC*/
+@media (min-width: 1024px){
+    .titulo{
+        font-size: 4rem;
+    }
+    .container{
+        max-width: 900px;
+    }
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 6px solid var(--cor_branco);
+    }
+    nav {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    align-items: center;
+    }
+
+}
+/* Fim tela para pc*/
