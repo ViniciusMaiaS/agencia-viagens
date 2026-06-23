@@ -47,28 +47,46 @@
     </header>
     <main>
         <section>
-            <!--Página generica (editar depois)-->
-            <form><br>
-                <label for="nome">Nome:</label><br>
-                <input type="text" placeholder="Digite o seu nome" required> <br> <br>
-       
-                <label for="email">Email: </label><br>
-                <input type="email" placeholder="Digite o seu email" required> <br> <br>
-
-                <label for="idade">Idade: </label><br>
-                <input type="idade"> <br> <br>
-
-                <label for="mensagem">mensagem: </label><br>
-                <input type="mensagem" placeholder="Digite a sua mensagem"> <br> <br>
-
-                <button type="submit">Enviar</button>
-                <BUTTon type="reset">Limpar</BUTTon>
-
-
-
-
+            <h2 style="text-align: center; margin-top: 20px; color: #333;">Chama nós Aqui !!!</h2>
+            
+            <form class="formulario-contato">
+                
+                <div class="campo-grupo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+    
+                <div class="campo-grupo">
+                    <label for="email">E-mail de Contato:</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: nome@email.com" required>
+                </div>
+    
+                <div class="campo-grupo">
+                    <label for="telefone">Telefone / WhatsApp:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Ex: (85) 99999-9999">
+                </div>
+    
+                <div class="campo-grupo">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" placeholder="Sua idade">
+                </div>
+    
+                <div class="campo-grupo">
+                    <label for="destino">Destino de Interesse:</label>
+                    <input type="text" id="destino" name="destino" placeholder="Ex: Fernando de Noronha, Paris...">
+                </div>
+    
+                <div class="campo-grupo">
+                    <label for="mensagem">Mensagem ou Observações:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos mais sobre a viagem dos seus sonhos..."></textarea>
+                </div>
+    
+                <div class="botoes-grupo">
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                    <button type="reset" class="btn-zap">Whats Zap</button>
+                </div>
+    
             </form>
-       <br> 
         </section>
     </main>
     <!-- Alteração feita por Carlos Italo: Adicionado o rodapé da página -->
