@@ -164,6 +164,108 @@ body {
 
 
 
+/* CSS da Página Contato */
+/*Alteraões feitas por Carlos Italo:
+/* Define um fundo cinza claro*/
+main {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+/* Cria o seção de contato (quadro branco centralizado)*/
+.secao-contato {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px; /* Bordas bem arredondadas no card */
+}
+
+/* Estilo do título */
+.titulo-contato {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Espaçamento entre as caixas de texto */
+.campo-grupo {
+    margin-bottom: 20px;
+}
+
+/* Configuração descrião dos nomes dos cmapos */
+.campo-grupo label {
+    display: block; /* Força o texto a ficar em cima do campo */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Estilização moderna das caixas de entrada de texto */
+.campo-grupo input, 
+.campo-grupo textarea {
+    width: 100%; /* Ocupa toda a largura da caixinha branca */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordas arredondadas nos campos! */
+    font-size: 15px;
+    box-sizing: border-box; /* Impede que o padding estoure o tamanho do campo */
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Destaque em laranja (cor do Sol & Mar) quando o usuário clica no campo 
+.campo-grupo input:focus, 
+.campo-grupo textarea:focus {
+    border-color: #ff8c00;
+}
+*/
+
+/* Alinhamento dos botões lado a lado */
+.botoes-grupo {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Base arredondada dos botões */
+.btn-enviar , .btn-zap {
+    padding: 14px;
+    border: none;
+    border-radius: 10px; /* Botões arredondados */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Botão Enviar - Laranja Principal */
+.btn-enviar {
+    background-color: #ff8c00;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #e07b00;
+}
+
+/* Botão Zap - Verde */
+.btn-zap {
+    padding: 14px 25px;
+    background-color: #25D366;
+    color: #ffffff;
+}
+
+.btn-zap:hover {
+    background-color: #25D366;
+}
+
+
+
+
 
 
 /* tela para tablet */
