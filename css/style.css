@@ -18,7 +18,7 @@
 .logo{
     height: 80px;
     width: auto;
-    margin: 0 40px;
+    margin: 0 30px;
 } 
 
 header {
@@ -45,7 +45,7 @@ header {
 }
 
 nav {
-    display: flex;
+    display: inline-block;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,6 @@ nav .custom-navlink.pagina_ativa {
 /* Body Padrão (Alterar conforme desenvolvimento do site) */
 body {
     padding-top: 0px;
-    font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     background-size: 25px 25px;
 }
@@ -262,6 +261,153 @@ main {
 .btn-zap:hover {
     background-color: #25D366;
 }
+
+/* Seção dos destinos na página principal */
+/* --- CONFIGURAÇÕES GERAIS --- */
+.secao-inspiracao, .secao-roteiros {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.cabecalho-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cabecalho-secao h2 {
+    font-family: var(--title-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 8px;
+}
+.divisor-secao {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+/* Cards de Destinos da Página Principal */
+.grid-inspiracao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+.card-inspiracao {
+    position: relative;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.card-inspiracao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+/* Sombra na imagem para destacar o texto */
+.card-inspiracao::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%);
+    transition: opacity 0.3s ease;
+}
+.overlay-conteudo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    z-index: 2;
+    color: white;
+    font-family: var(--title-font);
+}
+.overlay-conteudo h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.overlay-conteudo .estado {
+    font-size: 14px;
+    opacity: 0.8;
+}
+/* Efeito de movimento */
+.card-inspiracao:hover img {
+    transform: scale(1.1);
+}
+
+/* Cards de Destinos Em Alta */
+.grid-roteiros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+.card-roteiro {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #eef2f5;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+.card-roteiro:hover {
+    transform: translateY(-5px);
+}
+.img-container {
+    width: 100%;
+    height: 180px;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.roteiro-conteudo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.roteiro-conteudo h3 {
+    font-family: var(--title-font);
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 12px 0;
+}
+.roteiro-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--title-font);
+    font-size: 13px;
+    margin-top: auto;
+}
+.geo-local {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #95a5a6;
+}
+.qtd-passeios {
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
 
 
 
