@@ -1,5 +1,5 @@
 * {
-    margin: 0px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,14 +11,19 @@
     --cor_preto: black;
     --cor_madeira: #DEB887;
     --cor_sol: #FF7B00;
+    --cor_mar_escuro: #0077B6;
+    --cor_mar_claro: #FFF8F0;
+    --cor_areia: #FFF8F0;
+    --cor_folhas: #2A9D8F;
+    --cor_textoescuro: #03045E;
+    --cor_fundo_claro: #FFF8F0;
+    --cor_texto_escuro: #03045E;
 }
 
 
 /* Logo no titulo, navbar e botoes da navbar */
 .logo{
-    height: 80px;
-    width: auto;
-    margin: 0 30px;
+    height: 0px;
 } 
 
 header {
@@ -28,12 +33,12 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 4px solid var(--cor_sol);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    background-image: url(/images/fundonav.jpg);
 }
 .header-content {
     display: flex;
@@ -58,18 +63,15 @@ nav .custom-navlink{
     font-size: 18px;
     text-decoration: none;
     color:var(--cor_branco) !important;
-    transition: transform 0.2s ease;
+
 }
 nav .custom-navlink:hover {
     color: var(--cor_sol) !important;
-    border-radius: 10px;
-    transform: scale(1.10);
 }
 nav .custom-navlink.active, 
 nav .custom-navlink.pagina_ativa {
     font-weight: bold;
     color: var(--cor_sol) !important;
-    transform: scale(1.10);
 }
 /* FIM DA NAV*/
 
@@ -88,6 +90,7 @@ body {
     url("../images/fundo_principal.jpg");
     background-size: cover;
     background-position: center;
+    border-bottom: solid 6px var(--cor_sol);
     
     display: flex;
     flex-direction: column;
@@ -406,8 +409,213 @@ main {
 
 
 
+/*PAGINA PACOTES VMS*/
+/* Card Destaque Aquiraz */
+.pacote-card {
+    background-color: var(--cor_fundo_claro);
+    border: 2px solid var(--cor_mar_escuro);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(3, 4, 94, 0.1);
+    width: 100%; 
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img-pacote-destaque{
+    width: 100%;
+    max-height: 100%;
+    position: absolute;
+}
+.pacote-card.destaque-master {
+    grid-column: 1 / -1; /* Mágica: Faz o card ocupar todas as colunas de ponta a ponta */
+    display: flex; /* Transforma o card de vertical para horizontal */
+    flex-direction: row;
+}
+.pacote-card.destaque-master .pacote-imagem {
+    flex: 1.5; /* Dá mais espaço para a imagem */
+    height: 100%;
+    min-height: 350px;
+}
+.pacote-card.destaque-master .pacote-conteudo {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza tudo verticalmente */
+}
+.pacote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(3, 4, 94, 0.15);
+}
 
+/* Tag de Destaque usando a Cor_folhas */
+.pacote-tag {
+    background-color: var(--cor_folhas);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 16px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border-radius: 50px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
+/* Área da Imagem */
+.pacote-imagem {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pacote-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Texto sobreposto na imagem usando Mar Profundo */
+.pacote-destino {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(3, 4, 94, 0.8));
+    color: #ffffff;
+    padding: 20px 20px 10px 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Corpo do Conteúdo */
+.pacote-conteudo {
+    padding: 25px;
+}
+
+.pacote-titulo {
+    color: var(--cor_mar_escuro);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.pacote-descricao {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Lista de Benefícios inclusos */
+.pacote-beneficios {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.pacote-beneficios li {
+    color: var(--cor_texto_escuro);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.pacote-beneficios .icone {
+    color: var(--cor_folhas);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Seção de Preços */
+.pacote-preco-container {
+    border-top: 1px dashed var(--cor_madeira);
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.preco-antigo {
+    color: #888;
+    font-size: 0.85rem;
+    text-decoration: line-through;
+}
+
+.preco-atual {
+    color: var(--cor_texto_escuro);
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+}
+
+.preco-atual .moeda {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.preco-atual .parcela {
+    font-size: 0.85rem;
+    color: var(--cor_mar_escuro);
+    font-weight: normal;
+    margin-top: 2px;
+}
+
+/* Botão de Chamada para Ação com a Cor do Sol */
+.pacote-botao {
+    background-color: var(--cor_sol);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 14px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+}
+
+/* Efeito de hover no botão (escurece levemente o laranja do sol) */
+.pacote-botao:hover {
+    background-color: #E06C00;
+}
+
+.pacote-botao:active {
+    transform: scale(0.98);
+}
+/* Container da Vitrine de Pacotes */
+.pacotes-vitrine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Força 3 colunas exatas */
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; /* Centraliza a vitrine na tela */
+}
+
+@media (max-width: 992px) {
+    .pacotes-vitrine {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .pacotes-vitrine {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+    .pacote-card.destaque-master {
+        flex-direction: column; /* Volta a ser vertical no celular */
+    }
+    .pacote-card.destaque-master .pacote-imagem {
+        min-height: 250px;
+    }
+    .pacote-card.destaque-master .pacote-conteudo {
+        padding: 25px;
+    }
+}
 
 
 
@@ -475,6 +683,12 @@ main {
     .container{
         max-width: 100%;
     }
+    .logo{
+    height: 80px;
+    width: auto;
+    margin: 0 30px;
+} 
+
     header {
     display: flex;
     flex-direction: column;
