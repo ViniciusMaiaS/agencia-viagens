@@ -220,11 +220,10 @@ main {
 }
 
 /* Destaque em laranja (cor do Sol & Mar) quando o usuário clica no campo 
-.campo-grupo input:focus, 
+.campo-grupo input:focus, */
 .campo-grupo textarea:focus {
     border-color: #ff8c00;
 }
-*/
 
 /* Alinhamento dos botões lado a lado */
 .botoes-grupo {
