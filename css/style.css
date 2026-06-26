@@ -68,7 +68,7 @@ nav .custom-navlink{
 nav .custom-navlink:hover {
     color: var(--cor_sol) !important;
 }
-nav .custom-navlink.active, 
+nav .custom-navlink.active,
 nav .custom-navlink.pagina_ativa {
     font-weight: bold;
     color: var(--cor_sol) !important;
